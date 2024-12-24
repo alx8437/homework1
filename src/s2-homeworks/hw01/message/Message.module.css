@@ -3,19 +3,34 @@
 }
 
 .imageAndText {
-
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    margin-top: 10px;
 }
 
 .imageAndText img {
-
+    margin-left: 10px;
+    width: 48px;
+    height: 48px;
 }
 
 .text {
-
+    color: white;
+    border: 1px solid #0080ff;
+    background-color: #0080ff;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
 }
 
 .text:after {
-
+    position: absolute;
+    content: '';
+    border: 15px solid transparent;
+    border-bottom: 15px solid #0080ff;
+    top: 27px;
+    right: -16px;
 }
 
 .name {
@@ -27,5 +42,10 @@
 }
 
 .time {
-
+    margin-right: 10px;
+    display: flex;
+    justify-content: end;
+    font-weight: 600;
+    font-size: 10px;
+    color: #000;
 }

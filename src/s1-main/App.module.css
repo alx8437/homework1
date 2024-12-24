@@ -1,11 +1,18 @@
 .App {
     --header_height: 60px;
+    display: flex;
+    justify-content: center;
 }
 
 .hw {
+}
 
+.hw1 {
+    width: 1280px;
 }
 
 .hwTitle {
-
+    font-weight: 600;
+    font-size: 22px;
+    color: #000;
 }
