@@ -4,24 +4,26 @@ import {AffairType, FilterType} from '../HW2'
 import s from './Affairs.module.css'
 
 type AffairsPropsType = {
-    data: any // need to fix any
-    setFilter: any
-    deleteAffairCallback: any
+    data:  Array<AffairType>
+    setFilter: (filter: FilterType) => void;
+    deleteAffairCallback: (_id: number) => void;
     filter: FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
+    const { setFilter, deleteAffairCallback } = props;
+
     const setAll = () => {
-        // need to fix
+        setFilter("all");
     }
     const setHigh = () => {
-        // need to fix
+        setFilter("high");
     }
     const setMiddle = () => {
-        // need to fix
+        setFilter('middle');
     }
     const setLow = () => {
-        // need to fix
+        setFilter('low');
     }
 
     const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
@@ -33,7 +35,7 @@ function Affairs(props: AffairsPropsType) {
         <Affair
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
             affair={a}
-            deleteAffairCallback={props.deleteAffairCallback}
+            deleteAffairCallback={deleteAffairCallback}
         />
     ))
 
