@@ -25,7 +25,7 @@ const Greeting: React.FC<GreetingPropsType> = (
         lastUserName,
     }
 ) => {
-    const inputClass = error.length ? s.errorInput : ''// need to fix with (?:)
+    const inputClass = error.length ? s.errorInput : s.input
 
     return (
         <div id={'hw3-form'} className={s.greetingForm}>

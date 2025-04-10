@@ -38,7 +38,7 @@ const defaultAffairs: Array<AffairType> = [
 export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => {
     if (filter === "all") return affairs;
 
-    return affairs.filter(affair => affair.priority === filter) // need to fix
+    return affairs.filter(affair => affair.priority === filter)
 }
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => {
 
@@ -56,7 +56,7 @@ function HW2() {
     }
 
     return (
-        <div id={'hw2'}>
+        <div id={'hw2'} className={s2.wrapper}>
             <div className={s2.hwTitle}>Homework №2</div>
             <div className={s2.hw}>
                 <Affairs
