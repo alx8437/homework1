@@ -17,12 +17,11 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
         ...restProps // все остальные пропсы попадут в объект restProps, там же будет children
     }
 ) => {
-    const finalClassName = s.button
-         + (disabled
-                 ? s.disabled
-                : xType === 'red'
-                    ? s.red : s.default)
-        + (className ? ' ' + className : '')
+    const finalClassName = `
+    ${s.button}
+    ${disabled ? s.disabled : xType ? s[xType] : s.default}
+    ${className ? className : ''}
+  `.trim().replace(/\s+/g, ' ')
 
     return (
         <button
