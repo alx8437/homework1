@@ -2,6 +2,8 @@
 }
 
 .input {
+    width: 372px;
+    height: 36px;
 }
 
 .inputWrapper {
@@ -17,4 +19,5 @@
 }
 
 .error {
+    color: #cc1439;
 }
