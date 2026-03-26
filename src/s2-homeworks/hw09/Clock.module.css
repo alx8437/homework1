@@ -1,4 +1,7 @@
 .buttonsContainer {
+    max-width: 190px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .clock {
@@ -11,4 +14,22 @@
 }
 
 .more {
+    margin-bottom: 25px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.startButton {
+    width: 84px;
+    height: 30px;
+    border-color: #06c;
+    color: white;
+}
+
+.stopButton {
+    width: 84px;
+    height: 30px;
+    border-color: #06c;
+    color: white;
 }
